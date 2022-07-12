@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="dashBoardForm" prefHeight="460.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="460.0" fitWidth="659.0" opacity="0.5" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/OIP.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="202.0" layoutY="34.0" text="DashBoadrdForm" textFill="#143868">
+         <font>
+            <Font name="Bell MT" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="183.0" layoutY="74.0" prefHeight="5.0" prefWidth="305.0" />
+      <JFXButton buttonType="RAISED" layoutX="258.0" layoutY="122.0" onAction="#studentbtn" prefHeight="35.0" prefWidth="169.0" style="-fx-background-color: #84e4d4;" text="Student">
+         <font>
+            <Font name="Century Schoolbook" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="258.0" layoutY="168.0" onAction="#courseBtnOnAction" prefHeight="35.0" prefWidth="169.0" style="-fx-background-color: #d69999;" text="Course">
+         <font>
+            <Font name="Century Schoolbook" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
