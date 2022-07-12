@@ -9,6 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import module.Student;
 import view.tm.StudentTM;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class StudentAllController {
@@ -23,12 +24,21 @@ public class StudentAllController {
 
 
     public void initialize(){
-        colId.setCellValueFactory(new PropertyValueFactory<>("student_id"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("student_name"));
-        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
-        colContact.setCellValueFactory(new PropertyValueFactory<>("mobile_no"));
-        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
-        colNic.setCellValueFactory(new PropertyValueFactory<>("nic"));
+
+        try {
+            colId.setCellValueFactory(new PropertyValueFactory<>("student_id"));
+            colName.setCellValueFactory(new PropertyValueFactory<>("student_name"));
+            colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+            colContact.setCellValueFactory(new PropertyValueFactory<>("contact"));
+            colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+            colNic.setCellValueFactory(new PropertyValueFactory<>("nic_no"));
+
+            setAllStudent(new StudentController().getAllStudent());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 

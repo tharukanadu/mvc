@@ -56,7 +56,7 @@ public class StudentController {
             return null;
         }
     }
-    public static ArrayList<Student> getAllStudent() throws SQLException, ClassNotFoundException {
+    public  ArrayList<Student> getAllStudent() throws SQLException, ClassNotFoundException {
         PreparedStatement stm = DBUtil.getInstance().getConnection().prepareStatement("SELECT *FROM student");
         ResultSet rst = stm.executeQuery();
         ArrayList<Student> student = new ArrayList<>();
